@@ -10,8 +10,8 @@ namespace cs
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Damjan!");
-            int z;
+            int z = 19;
+            Console.WriteLine($"Hello, Damjan!" + z);
         }
     }
 }
