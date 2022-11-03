@@ -124,20 +124,23 @@ namespace cs
             //fib tar två sista värde och slår ihop
             var fibNumbers = new List<int> { 1, 1 };
 
-            //kolla de två sist värde (tänk på index börjar på 0
+            //1 kolla de två sist värde (tänk på index börjar på 0
             var previous1 = fibNumbers[fibNumbers.Count - 1];
             var previous2 = fibNumbers[fibNumbers.Count - 2];
 
-            //slå samman värden
+
+            //2 slå samman värden
             fibNumbers.Add(previous1 + previous2);
 
-            //få igenom varje fibNumber i konsol
+
+            //3 få igenom varje fibNumber i konsol
             foreach (var item in fibNumbers)
             {
                 Console.WriteLine(item);
             }
 
-            //testa att loopa fibNumber 20 gånger till 6765
+            
+            //4 testa att loopa fibNumber 20 gånger till 6765
             while(fibNumbers.Count < 20)
             {
 
@@ -149,7 +152,8 @@ namespace cs
                 fibNumbers.Add(previous11 + previous22);
 
             }
-            //få igenom varje fibNumber i konsol
+            
+            //5 få igenom varje fibNumber i konsol
             foreach (var item in fibNumbers)
             {
                 Console.WriteLine(item);
