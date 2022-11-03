@@ -16,6 +16,8 @@ namespace cs
             System.Data.DataSet ds;
             System.Net.Http.HttpClient client;
 
+            //-----TEST 1
+            
             // loop through the assemblies that this app references
             foreach (var r in Assembly.GetEntryAssembly()
             .GetReferencedAssemblies())
@@ -36,9 +38,12 @@ namespace cs
                 arg0: a.DefinedTypes.Count(),
                 arg1: methodCount,
                 arg2: r.Name);
-
-
             }
+
+
+
+            //------TEST 2
+
             // let the heightInMetres variable become equal to the value 1.88
             double heightInMetres = 1.88;
             Console.WriteLine($"The variable {nameof(heightInMetres)} has the value {heightInMetres}.");
@@ -51,21 +56,31 @@ namespace cs
             Console.WriteLine(
             "Temperature on {0:D} is {1}°C.", DateTime.Today, 23.4);
 
+            
+
+            //-----TEST 3 
+            
             //få 63 - räkna ihop alla siffror som kan delas med 3 från 1 till 20
             int sum = 0;
             for (int i = 1; i <= 20; i++)
             {
-                if (i % 3 ==0)
+                if (i % 3 == 0)
                 {
                     sum = sum + i;
                 }
             }
             Console.WriteLine($"Sum is {sum}");
 
+
+
+            //-----TEST 4
+
             //testa foreach och for
             var names = new List<string> { "New friend", "Damjan", "Marko" };
-            //sortera
+            
+            //sortera i bokstavsordning
             names.Sort();
+
             foreach (string name in names)
             {
                 Console.WriteLine($"Hello {name.ToLower()}!");
@@ -83,13 +98,14 @@ namespace cs
             {
                 Console.WriteLine(name);
             }
-            //aca
+
+            //ta ut ett namn vid specifik index
             Console.WriteLine(names[1]);
 
             //testa index
 
-            var index = names.IndexOf("aca");
-            Console.WriteLine($"Found Aca at index {index}");
+            var index = names.IndexOf("Marko");
+            Console.WriteLine($"Found Marko at index {index}");
 
             if (index == -1)
             {
@@ -98,6 +114,10 @@ namespace cs
             {
                 Console.WriteLine($"Iten found, of {names[index]} is at index {index}");
             }
+
+
+
+            //-----TEST 5
 
             //lists
             //deklerera och skapa ny lista
